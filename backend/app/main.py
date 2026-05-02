@@ -70,12 +70,13 @@ app = FastAPI(
 # ── CORS ─────────────────────────────────────────────────────────
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=settings.CORS_ORIGINS,
-    allow_credentials=True,
+    allow_origins=["*"],
+    allow_credentials=False,
     allow_methods=["*"],
     allow_headers=["*"],
 )
-print(f"[DEBUG] CORS Origins: {settings.CORS_ORIGINS}")
+
+print(f"[DEBUG] CORS configuration updated to allow all origins ('*').")
 
 
 # ── Global Exception Handlers ───────────────────────────────────
