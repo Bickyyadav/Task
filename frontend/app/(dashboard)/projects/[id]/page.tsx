@@ -156,7 +156,7 @@ export default function ProjectDetailPage() {
 
           {isAdmin && (
             <AlertDialog>
-              <AlertDialogTrigger asChild={false} render={<Button variant="outline" className="text-destructive hover:bg-destructive/10 border-destructive/20" />}>
+              <AlertDialogTrigger render={<Button variant="outline" className="text-destructive hover:bg-destructive/10 border-destructive/20" />}>
                 <Trash2 className="mr-2 h-4 w-4" />
                 Delete
               </AlertDialogTrigger>

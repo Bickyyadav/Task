@@ -101,7 +101,7 @@ export function KanbanBoard({
 
     if (newStatus && activeTask && activeTask.status !== newStatus) {
       updateTask.mutate({
-        id: activeTaskId,
+        taskId: activeTaskId,
         data: { status: newStatus },
       });
     }
