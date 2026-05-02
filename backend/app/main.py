@@ -98,7 +98,6 @@ async def validation_handler(request: Request, exc):
         },
     )
 
-
 @app.exception_handler(500)
 async def internal_error_handler(request: Request, exc):
     return JSONResponse(
@@ -109,7 +108,6 @@ async def internal_error_handler(request: Request, exc):
             "message": "Internal server error",
         },
     )
-
 
 # ── Register Routers ────────────────────────────────────────────
 app.include_router(auth_router)
